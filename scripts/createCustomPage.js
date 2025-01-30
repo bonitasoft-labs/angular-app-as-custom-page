@@ -18,7 +18,7 @@ const packageJsonPath = path.join(rootPath, 'package.json');
 });
 
 // Copy page.properties
-fs.copyFileSync(sourceFile, path.join(distResourcesDir, 'page.properties'));
+fs.copyFileSync(sourceFile, path.join(distDir, 'page.properties'));
 
 // Get application name from package.json
 const appName = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8')).name;

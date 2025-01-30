@@ -8,5 +8,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-angular-app';
+  title = 'angular-app-as-custom-page';
+
+  counter = 0;
+
+  incrementCounter() {
+    this.counter++;
+  }
 }

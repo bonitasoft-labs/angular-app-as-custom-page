@@ -1,10 +1,14 @@
 # How to import a Angular Application as a Bonita Custom Page
 
+The most important part to be able to import a Angular Application as custom page is to got the `index.html` at the root of a `resources` folder.
+
 
 ## Bonita update needed
 
-We need to remove the `browser` folder in `dist` to be allow to serve the application.
+We need to remove the `browser` folder in `dist` to be allow to serve the application with the `index.html` at the right level.
+
 Do do it, in `angular.json`, replace in  `architect > build > options`:
+
 ``` json
   "outputPath": "dist/my-angular-app",
 ```
@@ -14,7 +18,8 @@ with
   "base": "dist/resources",
   "browser": "",
   "media": "assets"
-  }
+  },
+  "baseHref": "./",
 ```
 
 ## Add a page.properties

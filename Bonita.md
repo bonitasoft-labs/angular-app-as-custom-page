@@ -58,3 +58,16 @@ Import the custom page generated on previous section
 Map this page to an application
 
 Open the application and you will see your angular page application
+
+
+## Inheritance and consideration of the application's theme
+
+In `index.html`, you need to declare this line.
+
+``` html
+<link href="../theme/theme.css" rel="stylesheet">
+```
+
+If you update the living application theme, you should ensure the theme is applied to your Angular custom page.
+
+![Angular application as custom page with an override theme](angular-application-as-custom-page.png)
